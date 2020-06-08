@@ -20,6 +20,7 @@ module.exports = {
                 .where({ user_id })
                 .join('users', 'users.id', '=', 'projects.user_id')
                 .select('projects.*', 'users.username')
+                .where('users.deleted_at', null)
 
                 countObj
                 .where({ user_id })
@@ -55,4 +56,3 @@ module.exports = {
     }
 }
 
-/* parei em 1:30:00 do sql no node.js com knex.js */

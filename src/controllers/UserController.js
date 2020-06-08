@@ -4,6 +4,8 @@ const knex = require('../database')
 module.exports = {
     async index(req, res) {
         const results = await knex('users')
+        /* método para mostrar o teste de simulação de deleção do migrations */
+        .where('deleted_at', null)
 
         return res.json(results)
     },
@@ -45,7 +47,9 @@ module.exports = {
         try {
             const { id } = req.params
 
-            await knex('users').where({id}).del()
+            await knex('users').where({id})
+            .update('deleted_at', new Date())
+            //.del()
 
             return res.send()
 
