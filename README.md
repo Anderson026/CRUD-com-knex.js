@@ -22,3 +22,6 @@ psql -U postgres = vai abrir o loguin e a senha (no meu caso o loguin é o nome 
 \dt = descreve as tabelas
 \d users = descreve o que contém na tabela de users
 \q = comando para deslogar do banco de dados
+
+# Link da aula
+https://youtu.be/U7GjS3FuSkA?list=PL85ITvJ7FLogMzb2s6K5wKpQK2nL76vUK
