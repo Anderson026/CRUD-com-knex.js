@@ -33,7 +33,7 @@ module.exports = {
             const { username } = req.body
             const { id } = req.params
 
-            await knex('users').update({ username }).where(id)
+            await knex('users').update({ username }).where({id})
 
             return res.send()
 
@@ -59,3 +59,4 @@ module.exports = {
     }
 }
 
+/* parei as 01:43:00 do sql no node.js com knex.js */
